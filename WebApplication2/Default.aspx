@@ -23,8 +23,7 @@
         <div class="col-md-4">
             <h2>Get more libraries</h2>
             <p>
-                <asp:PlaceHolder id="PlaceHolder1" 
-                                 runat="server"/>
+                <asp:PlaceHolder id="PlaceHolder1" runat="server"/>
             </p>
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301949">Learn more &raquo;</a>
@@ -33,7 +32,15 @@
         <div class="col-md-4">
             <h2>Web Hosting</h2>
             <p>
-                You can easily find a web hosting company that offers the right mix of features and price for your applications.
+                <asp:ScriptManager ID="ScriptManager1" runat="server" EnablePartialRendering=true></asp:ScriptManager>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:Label runat="server" ID="Label1" Text="blah"></asp:Label>
+                    </ContentTemplate>
+                    <Triggers>
+                        <asp:AsyncPostBackTrigger runat="server" EventName=""/>
+                    </Triggers>
+                </asp:UpdatePanel>
             </p>
             <p>
                 <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301950">Learn more &raquo;</a>
